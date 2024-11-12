@@ -42,7 +42,9 @@ For any questions, requirements, or more support for other platforms, please con
 
 ### Demo Instructions
 
-Use the example to see how to run the demo:
+$ cd example
+$ source install.sh 
+$ python example.py
 
 ## Screenshots from the demo App
 
