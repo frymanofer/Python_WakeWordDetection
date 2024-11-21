@@ -1,12 +1,29 @@
 import platform
 import sys
+import subprocess
+
+def install_wheel(wheel_url):
+    try:
+        # Use subprocess to run the pip install command
+        result = subprocess.run(
+            [sys.executable, "-m", "pip", "install", wheel_url],
+            check=True,  # Raise an exception on error
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        print(result.stdout)
+        print("Installation successful.")
+    except subprocess.CalledProcessError as e:
+        print("An error occurred while installing the package:")
+        print(e.stderr)
 
 # Base URL where wheels are hosted
 BASE_URL = "https://github.com/frymanofer/Python_WakeWordDetection/raw/main/dist"
 
 # Wheel prefix
 PACKAGE_NAME = "keyword_detection_lib"
-VERSION = "1.0.17"
+KEYWORD_DETECTION_VERSION = "1.0.17"
 
 # Determine Python version
 python_version = f"cp{sys.version_info.major}{sys.version_info.minor}"
@@ -33,10 +50,11 @@ else:
     raise ValueError(f"Unsupported platform: {system}")
 
 # Construct the wheel filename
-wheel_name = f"{PACKAGE_NAME}-{VERSION}-{python_version}-none-{platform_tag}.whl"
+wheel_name = f"{PACKAGE_NAME}-{KEYWORD_DETECTION_VERSION}-{python_version}-none-{platform_tag}.whl"
 
 # Construct the URL
 wheel_url = f"{BASE_URL}/{wheel_name}"
 
 # Output the installation command
-print(f"Run the following command to install the wheel:\n\npip install {wheel_url}")
+print(f"pip install {wheel_url}")
+
