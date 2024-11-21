@@ -11,6 +11,12 @@ By [DaVoice.io](https://davoice.io)
 
 Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword detection solution designed by **DaVoice.io**.
 
+## This example folder!
+
+Follow installation on in the main folder and run the below command:
+$ python example.py
+change example.py accordingly.
+
 ## Features
 
 - **High Accuracy:** Our advanced machine learning models deliver top-notch accuracy.
@@ -38,27 +44,11 @@ For any questions, requirements, or more support for other platforms, please con
 
 ## Installation and Usage
 
-### Important! 
-Please edit the installation files (install.sh or first_time_install.sh) and change PYTHON_VERSION=3.12 to your python version!!!
+### This Example Instructions
 
-### First time installation without venv environment:
-source first_time_installation.sh
-### If you already have venv environment:
-source install.sh
-
-### Important! 
-Please edit the installation files and change PYTHON_VERSION=3.12 to your python version!!!
-
-### Demo Instructions
-
-$ cd example
-$ source install.sh 
+Follow installation on in the main folder and run the below command:
 $ python example.py
-
-## Screenshots from the demo App
-
-### Usage Example
-See example
+change example.py accordingly.
 
 ## Benchmark.
 
