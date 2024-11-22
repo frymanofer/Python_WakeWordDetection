@@ -38,11 +38,14 @@ For any questions, requirements, or more support for other platforms, please con
 
 ## Installation and Usage
 
+Clone this repo
+
 ### Important! 
 Please edit the installation files (install.sh or first_time_install.sh) and change PYTHON_VERSION=3.12 to your python version!!!
 
 ### First time installation without venv environment:
 source first_time_installation.sh
+
 ### If you already have venv environment:
 source install.sh
 
@@ -52,7 +55,6 @@ Please edit the installation files and change PYTHON_VERSION=3.12 to your python
 ### Demo Instructions
 
 $ cd example
-$ source install.sh 
 $ python example.py
 
 ## Screenshots from the demo App
