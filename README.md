@@ -8,8 +8,22 @@ By [DaVoice.io](https://davoice.io)
 
 [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FDaVoiceAI)](https://twitter.com/DaVoiceAI)
 
-
 Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword detection solution designed by **DaVoice.io**.
+
+## About this project
+
+This is a "wake word" package for Python. A wake word is a keyword that activates your device, like "Hey Siri" or "OK Google".
+
+It also provide Speech to Intent. Speech to Intent refers to the ability to recognize a spoken word or phrase
+and directly associate it with a specific action or operation within an application. Unlike a "wake word," which typically serves to activate or wake up the application,
+Speech to Intent goes further by enabling complex interactions and functionalities based on the recognized intent behind the speech.
+
+For example, a wake word like "Hey App" might activate the application, while Speech
+to Intent could process a phrase like "Play my favorite song" or "Order a coffee" to
+execute corresponding tasks within the app.
+Speech to Intent is often triggered after a wake word activates the app, making it a key
+component of more advanced voice-controlled applications. This layered approach allows for
+seamless and intuitive voice-driven user experiences.
 
 ## Features
 
