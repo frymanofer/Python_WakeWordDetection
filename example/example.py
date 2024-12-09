@@ -32,7 +32,7 @@ async def main():
     # 2 - default
     # number between 1 and 10.
 #    keyword_model.set_keyword_detection_threshold_and_gateway_count('medium', 2)
-    keyword_model.set_keyword_detection_threshold_and_gateway_count('medium', 2)
+    keyword_model.set_keyword_detection_threshold_and_gateway_count('high', 3)
 
     # Use this to loop forever: 
     # keyword_model.start_keyword_detection()
