@@ -39,6 +39,10 @@ async def main():
     thread = threading.Thread(target=keyword_model.start_keyword_detection)
     thread.start()
     print(f"Thread created start_keyword_detection()")
+    thread.join()
+
+    while True:
+        time.sleep(1)  # Sleep for 1 second
 
     # await keyword_model.start_keyword_detection()
     # or setup an async call:
