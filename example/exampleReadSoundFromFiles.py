@@ -14,8 +14,8 @@ if __name__ == "__main__":
 
     fileList = sys.argv[1]
     models   = sys.argv[2]
-    predThreshold = 0.9
-    consecutiveCountThreshold = 7
+    predThreshold = 'high'
+    consecutiveCountThreshold = 4
     if len(sys.argv) > 3:
         predThreshold = sys.argv[3]
         print(f"setting prediction threshold to: {predThreshold}")
@@ -50,9 +50,6 @@ if __name__ == "__main__":
     # gateway count values:
     # 2 - default
     # number between 1 and 10.
-    #keyword_model.set_keyword_detection_threshold_and_gateway_count('high', 2)
-    keyword_model.set_keyword_detection_threshold_and_gateway_count('low', 10)
-    keyword_model.set_keyword_detection_threshold_and_gateway_count('low', 4)
     keyword_model.set_keyword_detection_threshold_and_gateway_count(predThreshold, consecutiveCountThreshold)
 
     # read sound files from "list.txt" into a list
