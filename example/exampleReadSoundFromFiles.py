@@ -1,5 +1,7 @@
 # example.py
 import sys
+import json
+import os
 
 from keyword_detection import KeywordDetection
 
@@ -15,7 +17,7 @@ if __name__ == "__main__":
     fileList = sys.argv[1]
     models   = sys.argv[2]
     predThreshold = 'high'
-    consecutiveCountThreshold = 4
+    consecutiveCountThreshold = 5
     if len(sys.argv) > 3:
         predThreshold = sys.argv[3]
         print(f"setting prediction threshold to: {predThreshold}")
@@ -37,7 +39,6 @@ if __name__ == "__main__":
     license_key = "MTczNDY0NTYwMDAwMA==-KyuASkB3Qk5SW/yWSwwzCtnd1nEuIMLPP8BxHWpfQno="
     keyword_model.set_keyword_detection_license(license_key)
     for keyword_models_name in keyword_model.keyword_models_names:
-        print ("model_name = ", keyword_models_name)
         keyword_model.set_callback(keyword_model_name=keyword_models_name,callback=detection_callback)
     
         # set keyword detection threshold sensitivity:
@@ -50,15 +51,45 @@ if __name__ == "__main__":
     # gateway count values:
     # 2 - default
     # number between 1 and 10.
+    #keyword_model.set_keyword_detection_threshold_and_gateway_count('high', 2)
+    #keyword_model.set_keyword_detection_threshold_and_gateway_count('low', 10)
+    #keyword_model.set_keyword_detection_threshold_and_gateway_count('low', 4)
     keyword_model.set_keyword_detection_threshold_and_gateway_count(predThreshold, consecutiveCountThreshold)
+    print(f"\n")
+    print(f"\n")
+    print(f"         *** Starting to detect from files ***\n")
 
-    # read sound files from "list.txt" into a list
-    soundFiles=[]
-    f = open(fileList,'r')
-    for line in f:
-       soundFiles.append(line.rstrip('\n'))
-    f.close()
+    # read sound files from "list.txt" 
+    summary={}
+    input_path = fileList
+    if input_path.endswith(".txt"):
+        with open(input_path, 'r') as f:
+            sound_files = [line.strip() for line in f if line.strip().endswith(".wav")]
+    elif input_path.endswith(".wav"):
+        sound_files = [input_path]
+    elif os.path.isdir(input_path):
+        sound_files = [os.path.join(input_path, f) for f in os.listdir(input_path) if f.endswith(".wav")]
+    else:
+        print("Invalid input. Please provide a .txt file, .wav file, or a folder containing .wav files.")
+        sys.exit(1)
+ 
+    for soundFile in sound_files:
+        print(f"detecting file:\n{soundFile}")
+        output = keyword_model.start_keyword_detection_from_file(soundFile)
+        summary[soundFile] = output
+#    f = open(fileList,'r')
+#    for line in f:
+#       soundFile=line.rstrip('\n')
+#       print(f"detecting file: {soundFile}")
+#       # run keyword detections on this filelist: 
+#       output = keyword_model.start_keyword_detection_from_file(soundFile)
+#       summary[soundFile]=output
+       
+    output_file_path = 'summary_output.json'
+    print(f"\n        *** Done Processing *** \nSaving results to : {output_file_path}")
+    with open(output_file_path, 'w', encoding='utf-8') as file:
+        json.dump(summary, file, indent=4)
 
-    # run keyword detections on this filelist: 
-    keyword_model.start_keyword_detection_from_file_list(soundFiles)
+#    f.close()
+
     
