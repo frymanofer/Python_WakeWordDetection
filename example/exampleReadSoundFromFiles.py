@@ -36,7 +36,7 @@ if __name__ == "__main__":
     #license for the library:
     #icense_key = "MTczMjkxNzYwMDAwMA==-DDwBWs914KpHbWBBSqi28vhiM4l5CYG+YgS2n9Z3DMI="
     #icense_key = "MTczNDIxMzYwMDAwMA==-tNV5HJ3NTRQCs5IpOe0imza+2PgPCJLRdzBJmMoJvok="
-    license_key = "MTczNDY0NTYwMDAwMA==-KyuASkB3Qk5SW/yWSwwzCtnd1nEuIMLPP8BxHWpfQno="
+    license_key = "MTczODEwMTYwMDAwMA==-Vmv1jwEG+Fbog9LoblZnVT4TzAXDhZs7l9O18A+8ul8="
     keyword_model.set_keyword_detection_license(license_key)
     for keyword_models_name in keyword_model.keyword_models_names:
         keyword_model.set_callback(keyword_model_name=keyword_models_name,callback=detection_callback)
