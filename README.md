@@ -55,6 +55,27 @@ Third          0.626567
 - **"Python wake word"** on **win_amd64**
 - **"Python wake word"** on **win.arm64**
 
+# Python Wake word generator
+
+## Create your "custom wake word" for Python
+
+In order to generate your **"custom wake word"** you will need to:
+
+- **Create Python wake word model:**
+    Contact us at info@davoice.io with a list of your desired **"custom wake words"**.
+
+    We will send you corresponding models typically your **wake word phrase .onnx** for example:
+
+    A wake word ***"hey sky"** will correspond to **hey_sky.onnx**.
+
+- **Add wake words to Python example:**
+    Simply copy your model onnx files to:
+    example/models/
+
+    In example.py change the "need_help_now.onnx" to your model.onnx
+    keyword_detection_models = ["models/need_help_now.onnx"]
+    run python example.py
+
 ## Contact
 
 For any questions, requirements, or more support for other platforms, please contact us at info@davoice.io.
@@ -94,7 +115,7 @@ For detailed references or specific benchmark results, please contact us at ofer
 ### Key words
 
 DaVoice.io Voice commands / Wake words / Voice to Intent / keyword detection npm for Android and IOS.
-"Wake word detection github"
+"Python Wake word detection github"
 "Wake word detection Python"
 "react-native wake word",
 "Wake word detection github",
