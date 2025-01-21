@@ -12,10 +12,10 @@ Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword 
 
 ## About this project
 
-This is a "wake word" package for Python. A wake word is a keyword that activates your device, like "Hey Siri" or "OK Google".
+This is a **"wake word"** package for Python. A wake word is a keyword that activates your device, like "Hey Siri" or "OK Google".
 
-It also provide Speech to Intent. Speech to Intent refers to the ability to recognize a spoken word or phrase
-and directly associate it with a specific action or operation within an application. Unlike a "wake word," which typically serves to activate or wake up the application,
+Except for **"Python wake word"** It also provide **"Python Speech to Intent"**. **Speech to Intent** refers to the ability to recognize a spoken word or phrase
+and directly associate it with a specific action or operation within an application. Unlike a **"wake word"**, which typically serves to activate or wake up the application,
 Speech to Intent goes further by enabling complex interactions and functionalities based on the recognized intent behind the speech.
 
 For example, a wake word like "Hey App" might activate the application, while Speech
@@ -27,9 +27,18 @@ seamless and intuitive voice-driven user experiences.
 
 ## Features
 
-- **High Accuracy:** Our advanced machine learning models deliver top-notch accuracy.
-- **Easy to deploy with React Native:** Check out our example code.
-- **Cross-Platform Support:** Integrate Davoice KeywordsDetection into most known architectures and OS.
+- **High Accuracy:** We have succesfully reached over 99% accurary for all our models.
+- **Here is on of our customer's benchmarks**:
+Benchmark on "Python wake word", vs top competitors:
+```
+MODEL         DETECTION RATE
+===========================
+DaVoice        0.992481
+Top Player     0.874812
+Third          0.626567
+```
+- **Easy to use and deploy with Python:** Check out our example code and install scripts.
+- **Cross-Platform Support:** Integrate Davoice "Python wake word" into most known HW architectures and OS.
 - **Low Latency:** Experience near-instantaneous keyword detection.
 
 ## Platforms and Supported Languages
