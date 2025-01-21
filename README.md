@@ -43,17 +43,17 @@ Third          0.626567
 
 ## Platforms and Supported Languages
 
-- **linux.x86_64**
-- **linux.aarch64**
-- **linux.armv7**
-- **linux.ppc64**
-- **linux.ppc64le**
-- **linux.s390x**
-- **darwin.x86_64**
-- **darwin.arm64**
-- **win32**
-- **win_amd64**
-- **win.arm64**
+- **"Python wake word "** on **linux.x86_64**
+- **"Python wake word "** on **linux.aarch64**
+- **"Python wake word "** on **linux.armv7**
+- **"Python wake word "** on **linux.ppc64**
+- **"Python wake word "** on **linux.ppc64le**
+- **"Python wake word "** on **linux.s390x**
+- **"Python wake word "** on **darwin.x86_64**
+- **"Python wake word"** on **darwin.arm64**
+- **"Python wake word"** on **win32**
+- **"Python wake word"** on **win_amd64**
+- **"Python wake word"** on **win.arm64**
 
 ## Contact
 
