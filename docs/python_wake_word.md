@@ -1,4 +1,7 @@
-# API Documentation for Keyword Detection
+# API Documentation for Wake Word / Keyword Detection
+
+# Python Wakeword Detection Library
+Learn how to implement "wake word", AKA  detection in Python applications with this lightweight and efficient library.
 
 ## Overview
 This module provides functionality for detecting specific keywords in audio input using a machine learning model. It utilizes asynchronous programming and threading to manage keyword detection and callbacks effectively.
