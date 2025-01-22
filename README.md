@@ -119,6 +119,11 @@ For detailed references or specific benchmark results, please contact us at ofer
 
 DaVoice.io Voice commands / Wake words / Voice to Intent / keyword detection npm for Android and IOS.
 "Python Wake word detection github"
+"Python Phrase Recognition",
+ "Python Phrase Spotting",
+ “Python  Voice triggered”,
+ “Python  hot word”,
+ “Python trigger word”,
 "Wake word detection Python"
 "react-native wake word",
 "Wake word detection github",
