@@ -107,7 +107,7 @@ $ python example.py
 See example
 
 ## Documentation
-- [API Reference](docs/python_wake_word.md)
+- ["Python Wake Word" API Reference](docs/python_wake_word.md)
 
 ## Benchmark.
 
