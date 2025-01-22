@@ -106,6 +106,9 @@ $ python example.py
 ### Usage Example
 See example
 
+## Documentation
+- [API Reference](docs/python_wake_word.md)
+
 ## Benchmark.
 
 Our customers have benchmarked our technology against leading solutions, including Picovoice Porcupine, Snowboy, Pocketsphinx, Sensory, and others. 
