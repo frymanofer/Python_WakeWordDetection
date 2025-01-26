@@ -1,5 +1,5 @@
 # Python_WakeWordDetection
-# Python Wake Words / Keywords Detection by Davoice
+# Python Wake Words Detection / Keywords Detection by Davoice
 
 [![GitHub release](https://img.shields.io/github/release/frymanofer/KeyWordDetectionIOSFramework.svg)](https://github.com/frymanofer/KeyWordDetectionIOSFramework/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -108,6 +108,7 @@ See example
 
 ## Documentation
 - ["Python Wake Word" API Reference](docs/python_wake_word.md)
+- frymanofer.github.io
 
 ## Benchmark.
 
@@ -119,6 +120,8 @@ For detailed references or specific benchmark results, please contact us at ofer
 
 DaVoice.io Voice commands / Wake words / Voice to Intent / keyword detection npm for Android and IOS.
 "Python Wake word detection github"
+"Python Wake word detection",
+"Python Wake word",
 "Python Phrase Recognition",
  "Python Phrase Spotting",
  “Python  Voice triggered”,
