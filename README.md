@@ -14,7 +14,7 @@ Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword 
 
 This is a **"wake word"** package for Python. 
 
-A **"wake word"** is a keyword or a phrase that activates your device or commands your application, like "Hey Siri" or "OK Google". "Wake Word" is also known as "keyword detection", "Phrase Recognition", "Phrase Spotting", “Voice triggered”, “hot word”, “trigger word”
+A **"wake word"** is a keyword or a phrase that activates your device or commands your application, like "Hey Siri" or "OK Google". "Wake Word" is also known as "keyword detection", "Phrase Recognition", "Phrase Spotting", “Voice triggered”, “hotword”, “trigger word”
 
 Except for **"Python wake word"** It also provide **"Python Speech to Intent"**. **Speech to Intent** refers to the ability to recognize a spoken word or phrase
 and directly associate it with a specific action or operation within an application. Unlike a **"wake word"**, which typically serves to activate or wake up the application,
@@ -127,7 +127,7 @@ DaVoice.io Voice commands / Wake words / Voice to Intent / keyword detection npm
 "Python Phrase Recognition",
  "Python Phrase Spotting",
  “Python  Voice triggered”,
- “Python  hot word”,
+ “Python  hotword”,
  “Python trigger word”,
 "Wake word detection Python"
 "react-native wake word",
