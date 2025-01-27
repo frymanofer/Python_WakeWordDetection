@@ -12,7 +12,7 @@ Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword 
 
 ## About this project
 
-This is a **"[wake word](https://davoice.io/wake-word)"** package for Python. 
+This is a **"<a href=https://davoice.io/wake-word" target="_blank">"Wake Word"</a>** package for Python. 
 
 A **"wake word"** is a keyword or a phrase that activates your device or commands your application, like "Hey Siri" or "OK Google". "Wake Word" is also known as "keyword detection", "Phrase Recognition", "Phrase Spotting", “Voice triggered”, “hotword”, “trigger word”
 
