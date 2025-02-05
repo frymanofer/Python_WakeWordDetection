@@ -1,0 +1,122 @@
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info/RECORD
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info/WHEEL
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info/top_level.txt
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info/REQUESTED
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info/INSTALLER
+..//venv3.12/lib/python3.12/site-packages/pvporcupine-3.0.4.dist-info/METADATA
+..//venv3.12/lib/python3.12/site-packages/pvporcupine
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/LICENSE
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/americano_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/grasshopper_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/computer_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/ok google_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/alexa_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/bumblebee_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/hey google_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/hey barista_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/pico clock_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/picovoice_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/porcupine_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/hey siri_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/jarvis_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/blueberry_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/terminator_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/raspberry-pi/grapefruit_raspberry-pi.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/hey siri_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/picovoice_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/alexa_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/hey google_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/hey barista_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/ok google_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/jarvis_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/grasshopper_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/bumblebee_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/porcupine_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/pico clock_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/americano_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/blueberry_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/computer_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/terminator_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/mac/grapefruit_mac.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/bumblebee_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/americano_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/hey google_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/pico clock_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/hey barista_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/view glass_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/blueberry_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/grasshopper_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/snowboy_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/computer_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/hey siri_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/porcupine_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/terminator_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/grapefruit_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/smart mirror_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/picovoice_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/ok google_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/alexa_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/linux/jarvis_linux.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/grasshopper_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/blueberry_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/porcupine_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/americano_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/terminator_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/ok google_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/hey siri_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/jarvis_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/picovoice_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/grapefruit_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/pico clock_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/hey google_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/alexa_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/hey barista_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/bumblebee_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/resources/keyword_files/windows/computer_windows.ppn
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/__init__.py
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/_factory.py
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/__pycache__
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/__pycache__/_porcupine.cpython-312.pyc
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/__pycache__/_util.cpython-312.pyc
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/__pycache__/_factory.cpython-312.pyc
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/__pycache__/__init__.cpython-312.pyc
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/_util.py
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a76
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a76/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/arm11
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/arm11/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a72-aarch64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a72-aarch64/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a53
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a53/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a72
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a72/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a76-aarch64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a76-aarch64/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a53-aarch64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/raspberry-pi/cortex-a53-aarch64/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/mac
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/mac/arm64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/mac/arm64/libpv_porcupine.dylib
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/mac/x86_64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/mac/x86_64/libpv_porcupine.dylib
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/common
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/common/porcupine_params.pv
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/linux
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/linux/x86_64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/linux/x86_64/libpv_porcupine.so
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/windows
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/windows/amd64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/windows/amd64/libpv_porcupine.dll
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/windows/arm64
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/lib/windows/arm64/libpv_porcupine.dll
+..//venv3.12/lib/python3.12/site-packages/pvporcupine/_porcupine.py
