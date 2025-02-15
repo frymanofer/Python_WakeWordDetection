@@ -32,15 +32,11 @@ seamless and intuitive voice-driven user experiences.
 - **High Accuracy:** We have succesfully reached over 99% accurary for all our models.
 - **Here is on of our customer's benchmarks**:
 Benchmark on "Python wake word", vs top competitors:
-
-Benmark used recordings with 1326 TP files.
-
-Second best was on of the industry top players who detected 1160 TP 
-
-Third  detected TP 831 out of 1326
-
-Score:
 ```
+** Benmark used recordings with 1326 TP files.
+** Second best was on of the industry top players who detected 1160 TP 
+** Third  detected TP 831 out of 1326
+
 MODEL         DETECTION RATE
 ===========================
 DaVoice        0.992458
