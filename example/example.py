@@ -15,7 +15,14 @@ async def main():
     keyword_detection_models = ["models/need_help_now.onnx"]
     keyword_model = KeywordDetection(keyword_models=keyword_detection_models)
     #license for the library:
-    license_key = "MTczODEwMTYwMDAwMA==-Vmv1jwEG+Fbog9LoblZnVT4TzAXDhZs7l9O18A+8ul8="
+    #license_key = "MTczODEwMTYwMDAwMA==-Vmv1jwEG+Fbog9LoblZnVT4TzAXDhZs7l9O18A+8ul8="
+    # Read the license key from the file
+    with open("licensekey.txt", "r") as file:
+        license_key = file.read().strip()
+
+    # Print to verify (optional)
+    print(f"lincese key is {license_key}")
+
     keyword_model.set_keyword_detection_license(license_key)
     for keyword_models_name in keyword_model.keyword_models_names:
         print ("model_name = ", keyword_models_name)
