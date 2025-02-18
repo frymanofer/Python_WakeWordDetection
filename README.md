@@ -45,11 +45,11 @@ seamless and intuitive voice-driven user experiences.
 
 ### **🔴 Crucial Criteria I - False Positives**
 - **This is THE most crucial criteria**, in hospital settings, false alerts are unacceptable—they waste valuable time and can compromise patient care.  
-- **✅ WITH DAVOICE: ZERO FALSE POSITIVES AFTER ONE MONTH OF TESTING.**  
+- **✅ DaVoice: "ZERO FALSE POSITIVES" within a month duration of testing.**  
 - In contrast, Picovoice triggered several false alerts during testing, making it unsuitable for critical environments like hospitals.  
 - OpenWakeWord was not tested for false positives because its true positive rate was too low.  
 
-### **🔴 Criteria II True Positive**
+### **🔴 Criteria II - True Positive**
 
 **Table 1: A comparison of model performance on custom keywords**  
 ```
