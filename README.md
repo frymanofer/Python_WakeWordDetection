@@ -27,25 +27,57 @@ Speech to Intent is often triggered after a wake word activates the app, making 
 component of more advanced voice-controlled applications. This layered approach allows for
 seamless and intuitive voice-driven user experiences.
 
-## Features
+# Features
 
-- **High Accuracy:** We have succesfully reached over 99% accurary for all our models.
-- **Here is on of our customer's benchmarks**:
-Benchmark on "Python wake word", vs top competitors:
+- **Easy to use and deploy with Python:** Check out our example code and install scripts.
+- **Cross-Platform Support:** Integrate Davoice "Python wake word" into most known HW architectures and OS.
+- **Low Latency:** Experience near-instantaneous keyword detection.
+- **High Accuracy:** We have successfully reached over 99% accuracy for all our models.
+- **Real-World Benchmarks:** At DaVoice, we believe in real benchmarks done by customers on actual use cases rather than static tests. We actively encourage our customers to share their real-world experiences and results.
+
+# <u>Customer Benchmarks</u>
+
+## <u>Customer Benchmark I:</u>
+#### <u>Provided by **[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)**, CTO & Co-Founder of **[LookDeep Health](https://lookdeep.health/)**</u>  
+**[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)** conducted an independent benchmark at **[LookDeep Health](https://lookdeep.health/)** to select a **"phrase detection"** vendor.
+
+## **RESULTS BELOW:**
+
+### **🔴 Crucial Criteria I - False Positives**
+- **This is THE most crucial criteria**, in hospital settings, false alerts are unacceptable—they waste valuable time and can compromise patient care.  
+- **✅ WITH DAVOICE: ZERO FALSE POSITIVES AFTER ONE MONTH OF TESTING.**  
+- In contrast, Picovoice triggered several false alerts during testing, making it unsuitable for critical environments like hospitals.  
+- OpenWakeWord was not tested for false positives because its true positive rate was too low.  
+
+### **🔴 Criteria II True Positive**
+
+**Table 1: A comparison of model performance on custom keywords**  
 ```
-** Benmark used recordings with 1326 TP files.
-** Second best was on of the industry top players who detected 1160 TP 
-** Third  detected TP 831 out of 1326
+MODEL         DETECTION RATE
+===========================
+DaVoice                    0.992481
+Porcupine (Picovoice)      0.924812
+OpenWakeWords              0.686567
+```
 
+**Read Tyler Troy, CTO & Co-Founder of LookDeep, Reddit post:**  
+[Bulletproof Wakeword/Keyword Spotting](https://www.reddit.com/r/Python/comments/1ioo4yd/bulletproof_wakewordkeyword_spotting/)
+
+### **Customer Benchmark II - customer preferred to remain anonymous**  
+Benchmark on "Python wake word", vs top competitors:
+- Benmark used recordings with 1326 TP files.
+- Second best was on of the industry top players who detected 1160 TP 
+- Third  detected TP 831 out of 1326
+
+#### **Table 1: A comparison of model performance on custom keywords**  
+
+```
 MODEL         DETECTION RATE
 ===========================
 DaVoice        0.992458
 Top Player     0.874811
 Third          0.626697
 ```
-- **Easy to use and deploy with Python:** Check out our example code and install scripts.
-- **Cross-Platform Support:** Integrate Davoice "Python wake word" into most known HW architectures and OS.
-- **Low Latency:** Experience near-instantaneous keyword detection.
 
 ## Platforms and Supported Languages
 
