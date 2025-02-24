@@ -10,6 +10,8 @@ By [DaVoice.io](https://davoice.io)
 
 Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword detection solution designed by **DaVoice.io**.
 
+🔵  🟢  🟡  🔴  
+
 ## About this project
 
 This is a **"<a href="https://davoice.io/wake-word" target="_blank">wake word</a>"** package for Python. 
@@ -35,27 +37,27 @@ seamless and intuitive voice-driven user experiences.
 - **High Accuracy:** We have successfully reached over 99% accuracy for all our models.
 - **Real-World Benchmarks:** At DaVoice, we believe in real benchmarks done by customers on actual use cases rather than static tests. We actively encourage our customers to share their real-world experiences and results.
 
-# <u>Customer Benchmarks</u>
+# <u> 🟢🟢 Customer Benchmarks 🟢🟢 </u>
 
-## <u>Customer Benchmark I:</u>
+## <u>Customer Benchmark **Ⅰ**:</u>
 #### <u>Provided by **[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)**, CTO & Co-Founder of **[LookDeep Health](https://lookdeep.health/)**</u>  
 **[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)** conducted an independent benchmark at **[LookDeep Health](https://lookdeep.health/)** to select a **"phrase detection"** vendor.
 
 ## **RESULTS BELOW:**
 
-### **🔴 Crucial Criteria I - False Positives**
+### ** 🔵 Crucial Criteria **Ⅰ** - False Positives**
 - **This is THE most crucial criteria**, in hospital settings, false alerts are unacceptable—they waste valuable time and can compromise patient care.  
 - **✅ DaVoice: "ZERO FALSE POSITIVES" within a month duration of testing.**  
 - In contrast, Picovoice triggered several false alerts during testing, making it unsuitable for critical environments like hospitals.  
 - OpenWakeWord was not tested for false positives because its true positive rate was too low.  
 
-### **🔴 Criteria II - True Positive**
+### **🔵 Criteria II - True Positive**
 
 **Table 1: A comparison of model performance on custom keywords**  
 ```
 MODEL         DETECTION RATE
 ===========================
-DaVoice                    0.992481
+DaVoice                    0.992481 ✅
 Porcupine (Picovoice)      0.924812
 OpenWakeWords              0.686567
 ```
