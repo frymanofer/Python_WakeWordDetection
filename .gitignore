@@ -27,3 +27,6 @@ example/x
 example/models/get_scribe_model_28_25012025.onnx
 example/source/conf.py
 example/source/index.rst
+clean_example_build_files.sh
+list_get_nurse.txt
+list_hey_look_deep.txt
