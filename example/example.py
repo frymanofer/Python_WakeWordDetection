@@ -3,16 +3,46 @@ import time
 from keyword_detection import KeywordDetection
 import asyncio
 import threading
+import os
 
-def detection_callback(phrase):
-    print(f"detection_callback() Detected phrase: {phrase}")
+def secondary_detection_callback(params):
+    """Secondary detection callback with structured params."""
+    print(f"secondary_detection_callback()",)
+    print(f"secondary_detection_callback() Detected phrase: {params['phrase']} threshold_score: {params['threshold_scores']}")
+
+def detection_callback(params):
+    """Main detection callback with structured params."""
+    phrase = params["phrase"]
+    threshold_scores = params["threshold_scores"]
+    non_zero_scores = [score for score in threshold_scores if score != 0]
+    version = 'N/A'
+    if "version" in params:
+        version = params["version"]
+    print(f"detection_callback() Detected phrase: {phrase} scores={non_zero_scores} version={version}")
     for seconds_left in range(5, -1, -1):
         print(f"Please wait for {seconds_left} seconds before calling '{phrase}' again.")
         time.sleep(1)
 
 async def main():
+    
     # The array of models to be used:
-    keyword_detection_models = ["models/need_help_now.onnx"]
+    keyword_detection_models = [
+        {
+            "model_path": "models/hey_lookdeep_model_28_06032025_bno22.onnx",
+            "callback_function": detection_callback,
+            "threshold": 0.99,
+            "buffer_cnt": 4
+        },
+         # Add more models here:
+        #,
+        # {
+        #     "model_path": "models/hey_nexus_model_28_13022025.onnx",
+        #     "callback_function": detection_callback,
+        #     "threshold": 0.9999,
+        #     "buffer_cnt": 3
+        # }
+    ]
+    
     keyword_model = KeywordDetection(keyword_models=keyword_detection_models)
     #license for the library:
     #license_key = "MTczODEwMTYwMDAwMA==-Vmv1jwEG+Fbog9LoblZnVT4TzAXDhZs7l9O18A+8ul8="
@@ -25,25 +55,14 @@ async def main():
 
     keyword_model.set_keyword_detection_license(license_key)
     for keyword_models_name in keyword_model.keyword_models_names:
-        print ("model_name = ", keyword_models_name)
-        keyword_model.set_callback(keyword_model_name=keyword_models_name,callback=detection_callback)
+        #keyword_model.set_callback(keyword_model_name=keyword_models_name,callback=detection_callback)
+        keyword_model.set_secondary_callback(keyword_model_name=keyword_models_name,callback=secondary_detection_callback, secondary_threshold=0.9)
     
-        # set keyword detection threshold sensitivity:
-    # threshold sensitivity values:
-    #   'high' - default
-    #   'medium'
-    #   'low'
-    #   'lowest' 
-    # gateway count: how many time to double check before calling callback
-    # gateway count values:
-    # 2 - default
-    # number between 1 and 10.
-#    keyword_model.set_keyword_detection_threshold_and_gateway_count('medium', 2)
-    keyword_model.set_keyword_detection_threshold_and_gateway_count('high', 3)
-
     # Use this to loop forever: 
-    # keyword_model.start_keyword_detection()
-    thread = threading.Thread(target=keyword_model.start_keyword_detection)
+    #thread = threading.Thread(target=keyword_model.start_keyword_detection)
+    thread = threading.Thread(target=keyword_model.start_keyword_detection, 
+                            kwargs={"enable_vad": False, "buffer_ms": 100})
+    #keyword_model.start_keyword_detection()
     thread.start()
     print(f"Thread created start_keyword_detection()")
     thread.join()

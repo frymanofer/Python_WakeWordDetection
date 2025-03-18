@@ -1,4 +1,4 @@
-PYTHON_VERSION=3.12
+PYTHON_VERSION=3.10
 # Create your venv library:
 python${PYTHON_VERSION} -m venv venv${PYTHON_VERSION}
 
@@ -6,7 +6,7 @@ python${PYTHON_VERSION} -m venv venv${PYTHON_VERSION}
 source venv${PYTHON_VERSION}/bin/activate
 
 # Set the right library of keyword_detection
-export KEYWORD_DETECTION_VERSION="1.0.19"
+export KEYWORD_DETECTION_VERSION="1.0.20"
 
 # Capture the output of the Python script
 command=$(python install.py)

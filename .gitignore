@@ -14,6 +14,7 @@ example/exampleReadSoundFromFiles2.py
 example/exampleReadSoundFromFiles2.sh
 example/list.txt
 example/make.bat
+example/models_internal
 example/nn-pred-hey_look_deep_model_28_08122024.png
 example/nn-pred-hey_look_deep_model_28_14122024.png
 example/noise_reduced_data.wav
