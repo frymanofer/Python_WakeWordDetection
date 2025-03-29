@@ -40,7 +40,7 @@ seamless and intuitive voice-driven user experiences.
 # <u> 🟢🟢 Customer Benchmarks 🟢🟢 </u>
 
 ## <u>Customer Benchmark **Ⅰ**:</u>
-#### <u>Provided by **[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)**, CTO & Co-Founder of **[LookDeep Health](https://lookdeep.health/)**</u>  
+#### <u>Provided by **[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)**, Co-Founder at **[LookDeep Health](https://lookdeep.health/)**</u>  
 **[Tyler Troy](https://lookdeep.health/team/tyler-troy-phd/)** conducted an independent benchmark at **[LookDeep Health](https://lookdeep.health/)** to select a **"phrase detection"** vendor.
 
 ## **RESULTS BELOW:**
@@ -62,7 +62,7 @@ Porcupine (Picovoice)      0.924812
 OpenWakeWords              0.686567
 ```
 
-**Read Tyler Troy, CTO & Co-Founder of LookDeep, Reddit post:**  
+**Read Tyler Troy, Co-Founder at LookDeep, Reddit post:**  
 [Bulletproof Wakeword/Keyword Spotting](https://www.reddit.com/r/Python/comments/1ioo4yd/bulletproof_wakewordkeyword_spotting/)
 
 ### **Customer Benchmark II - customer preferred to remain anonymous**  
