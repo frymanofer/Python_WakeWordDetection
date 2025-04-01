@@ -1,0 +1,1 @@
+venv312\Scripts\python.exe example.py
