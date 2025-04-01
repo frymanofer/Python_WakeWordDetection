@@ -29,7 +29,7 @@ REM Set the right library of keyword_detection
 set KEYWORD_DETECTION_VERSION=1.0.18
 
 REM Run the Python install script directly
-py install.py
+py win_install.py
 
 endlocal
 

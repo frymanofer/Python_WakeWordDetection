@@ -1,4 +1,4 @@
-install.py:
+#install.py:
 
 import platform
 import sys
