@@ -2,8 +2,8 @@
 setlocal
 
 REM Define Python version
-set PYTHON_VERSION=3.11
-set PYTHON_VERSION_SHORT=311
+set PYTHON_VERSION=3.12
+set PYTHON_VERSION_SHORT=312
 
 REM Ensure Python 3.12 is installed and used
 py -%PYTHON_VERSION% --version >nul 2>&1
