@@ -2,8 +2,8 @@
 setlocal
 
 REM Define Python version
-set PYTHON_VERSION=3.12
-set PYTHON_VERSION_SHORT=312
+set PYTHON_VERSION=3.11
+set PYTHON_VERSION_SHORT=311
 
 REM Ensure Python 3.12 is installed and used
 py -%PYTHON_VERSION% --version >nul 2>&1
@@ -26,7 +26,7 @@ REM Verify Python version inside venv
 py --version
 
 REM Set the right library of keyword_detection
-set KEYWORD_DETECTION_VERSION=1.0.18
+set KEYWORD_DETECTION_VERSION=2.0.1
 
 REM Run the Python install script directly
 py win_install.py
