@@ -58,7 +58,6 @@ def print_countdown_banner(message_prefix, seconds):
             print(border)
             time.sleep(1)
         clear_console()
-        print_countdown_banner("Waiting for Wake Word")
     # Start new countdown
     countdown_thread = threading.Thread(target=run_countdown)
     countdown_thread.start()
@@ -242,6 +241,7 @@ keyword_detection_models = [
 
 async def main():
     global keyword_detection_models_russian, keyword_detection_models
+    global countdown_thread, stop_event
 
     parser = argparse.ArgumentParser(description="Wake Word Detection with Language Option")
     parser.add_argument('--lang', choices=['english', 'russian'], default='english', help='Choose language')
@@ -271,7 +271,12 @@ async def main():
     #keyword_model.start_keyword_detection()
     thread.start()
     print(f"Thread created start_keyword_detection()")
-    print_countdown_banner(f"Running in {lang} mode", 100000)
+    while True:
+        time.sleep(1)  # Sleep for 1 second
+      # Stop the previous countdown if still running
+        if not countdown_thread or not countdown_thread.is_alive():
+            print_countdown_banner(f"Waiting for {lang} Wake Word", 100000)
+
     thread.join()
 
     while True:
