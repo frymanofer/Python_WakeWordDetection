@@ -21,9 +21,6 @@ def detection_callback(params):
     if "version" in params:
         version = params["version"]
     print(f"detection_callback() Detected phrase: {phrase} scores={non_zero_scores} version={version}")
-    for seconds_left in range(5, -1, -1):
-        print(f"Please wait for {seconds_left} seconds before calling '{phrase}' again.")
-        time.sleep(1)
 
 async def main():
     
