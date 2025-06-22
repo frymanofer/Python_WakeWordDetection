@@ -11,7 +11,47 @@ def restart_mic(py_audio, FORMAT, CHANNELS, RATE, CHUNK):
     # You may want to close and reopen, here is a simple version:
     return py_audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
 
-def feed_audio(keyword_model):
+def mic_dispatcher_thread(keyword_model):
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    RATE = 16000
+    CHUNK = 1280
+
+    p = pyaudio.PyAudio()
+    stream = p.open(
+        format=FORMAT,
+        channels=CHANNELS,
+        rate=RATE,
+        input=True,
+        frames_per_buffer=CHUNK
+    )
+
+    try:
+        while True:
+            data = stream.read(CHUNK, exception_on_overflow=False)
+            audio_frame = np.frombuffer(data, dtype=np.int16)
+
+            if keyword_model.is_listening:
+                keyword_model.feed_audio_frame(audio_frame)
+
+            if keyword_model.is_listening_vad_stand_alone:
+                speech_probability = keyword_model.feed_audio_frame_vad(audio_frame)
+                if (speech_probability > 0.2):
+                    print(f"speech_probability is {speech_probability * 100:.1f}%")
+
+            dbfs, actual_sound = keyword_model.feed_audio_frame_noise_detection(audio_frame, low_noise_margin_db = 20, high_noise_margin_db = 40)
+            if (actual_sound != 'silence'):
+                print (f"dbfs = {dbfs} actual sound = {actual_sound}")
+
+    except Exception as e:
+        print("Mic dispatcher crashed:", e)
+
+    finally:
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+
+def feed_audio_wakeword(keyword_model):
     FORMAT = pyaudio.paInt16
     CHANNELS = 1
     RATE = 16000
@@ -91,12 +131,32 @@ async def main():
     #thread = threading.Thread(target=keyword_model.start_keyword_detection, 
     #                        kwargs={"enable_vad": False, "buffer_ms": 100})
     
+
+    # Run with one audio frame dispatcher
     keyword_model.start_keyword_detection_external_audio(enable_vad=False, buffer_ms=100)
-    #keyword_model.start_keyword_detection()
-    thread = threading.Thread(target=feed_audio, args=(keyword_model,))
+    keyword_model.start_vad_external_audio()
+    thread = threading.Thread(target=mic_dispatcher_thread, args=(keyword_model,))
     thread.start()
-    print(f"Thread created start_keyword_detection()")
     thread.join()
+
+    # # Run independently:
+    # thread = threading.Thread(target=feed_audio_wakeword, args=(keyword_model,))
+    # thread.start()
+    # print(f"Thread created start_keyword_detection()")
+
+    # #keyword_model.start_keyword_detection()
+    # thread_vad = threading.Thread(target=feed_audio_frame_vad, args=(keyword_model,))
+    # thread_vad.start()
+    # print(f"Thread created feed_audio_frame_vad()")
+
+    # no need to start the noise detection.
+    #thread_noise_detect = threading.Thread(target=feed_audio_frame_noise_detection, args=(keyword_model,))
+    #thread_noise_detect.start()
+    #print(f"Thread created thread_noise_detect()")
+
+    # thread.join()
+    # thread_vad.join()
+    # thread_noise_detect.join()
 
     while True:
         time.sleep(1)  # Sleep for 1 second
