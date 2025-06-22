@@ -26,7 +26,7 @@ REM Verify Python version inside venv
 py --version
 
 REM Set the right library of keyword_detection
-set KEYWORD_DETECTION_VERSION=2.0.1
+set KEYWORD_DETECTION_VERSION=2.0.3
 
 REM Run the Python install script directly
 py win_install.py

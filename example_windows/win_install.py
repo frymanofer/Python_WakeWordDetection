@@ -12,7 +12,7 @@ BASE_URL = "https://github.com/frymanofer/Python_WakeWordDetection/raw/main/dist
 PACKAGE_NAME = "keyword_detection_lib"
 
 # Check for the environment variable or use the default version
-KEYWORD_DETECTION_VERSION = os.getenv("KEYWORD_DETECTION_VERSION", "2.0.1")
+KEYWORD_DETECTION_VERSION = os.getenv("KEYWORD_DETECTION_VERSION", "2.0.3")
 
 # Determine Python version
 python_version = f"cp{sys.version_info.major}{sys.version_info.minor}"
