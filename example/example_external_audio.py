@@ -1,4 +1,4 @@
-# example.py
+# example_external_audio.py
 import time
 from keyword_detection import KeywordDetection
 import asyncio
