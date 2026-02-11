@@ -159,6 +159,178 @@ $ python example.py
 ### Usage Example
 See example
 
+## API Reference
+
+### Initialization
+
+#### `KeywordDetection(keyword_models=keyword_detection_models)`
+
+Creates a new keyword detection instance. `keyword_detection_models` is a list of model configuration dictionaries:
+
+```python
+from keyword_detection import KeywordDetection
+
+keyword_detection_models = [
+    {
+        "model_path": "models/your_wake_word.onnx",  # Path to the ONNX model file
+        "callback_function": detection_callback,       # Function called on detection
+        "threshold": 0.9,                              # Detection sensitivity (0.0 - 1.0)
+        "buffer_cnt": 4,                               # Number of buffered inferences
+        "wait_time": 50                                # Wait time in ms between inferences
+    }
+]
+
+keyword_model = KeywordDetection(keyword_models=keyword_detection_models)
+```
+
+You can add multiple models to the list to detect several wake words simultaneously.
+
+### License
+
+#### `set_keyword_detection_license(license_key)`
+
+Sets the license key for the library. The license key can be read from a file:
+
+```python
+with open("licensekey.txt", "r") as file:
+    license_key = file.read().strip()
+
+keyword_model.set_keyword_detection_license(license_key)
+```
+
+### Callbacks
+
+#### Detection Callback
+
+The callback function receives a `params` dictionary with the following keys:
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `phrase` | `str` | The detected wake word / phrase |
+| `threshold_scores` | `list[float]` | Array of detection scores |
+| `version` | `str` (optional) | Model version |
+
+```python
+def detection_callback(params):
+    phrase = params["phrase"]
+    threshold_scores = params["threshold_scores"]
+    version = params.get("version", "N/A")
+    print(f"Detected: {phrase} scores={threshold_scores} version={version}")
+```
+
+#### `set_secondary_callback(keyword_model_name, callback, secondary_threshold)`
+
+Sets a secondary callback that fires when audio scores are higher than usual but below the primary detection threshold. Useful for logging near-detections and improving models:
+
+```python
+def lower_threshold_callback(params):
+    print(f"Near-detection for: {params['phrase']} scores: {params['threshold_scores']}")
+
+for name in keyword_model.keyword_models_names:
+    keyword_model.set_secondary_callback(
+        keyword_model_name=name,
+        callback=lower_threshold_callback,
+        secondary_threshold=0.9
+    )
+```
+
+### Detection Modes
+
+#### Mode 1: Internal Audio (Built-in Microphone Capture)
+
+Use `start_keyword_detection()` when you want the library to handle microphone audio capture internally. This is the simplest approach.
+
+**Example** ([example/example.py](example/example.py) for Linux/macOS, [example_windows/example.py](example_windows/example.py) for Windows):
+
+```python
+import threading
+
+thread = threading.Thread(
+    target=keyword_model.start_keyword_detection,
+    kwargs={"enable_vad": False, "buffer_ms": 100}
+)
+thread.start()
+thread.join()
+```
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `enable_vad` | `bool` | Enable Voice Activity Detection |
+| `buffer_ms` | `int` | Audio buffer size in milliseconds |
+
+#### Mode 2: External Audio (You Provide Audio Frames)
+
+Use the external audio API when you need to capture and control audio yourself (e.g., from a custom source, network stream, or shared microphone). Audio frames must be **16-bit PCM, mono, 16 kHz**.
+
+**Example** ([example/example_external_audio.py](example/example_external_audio.py) for Linux/macOS, [example_windows/example_external_audio.py](example_windows/example_external_audio.py) for Windows):
+
+```python
+import pyaudio
+import numpy as np
+
+# 1. Start external audio detection (non-blocking)
+keyword_model.start_keyword_detection_external_audio(enable_vad=False, buffer_ms=100)
+
+# 2. Optionally start standalone VAD
+keyword_model.start_vad_external_audio()
+
+# 3. Feed audio frames in a loop
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 16000
+CHUNK = 1280
+
+p = pyaudio.PyAudio()
+stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE,
+                input=True, frames_per_buffer=CHUNK)
+
+while True:
+    data = stream.read(CHUNK, exception_on_overflow=False)
+    audio_frame = np.frombuffer(data, dtype=np.int16)
+
+    # Feed audio for wake word detection
+    if keyword_model.is_listening:
+        keyword_model.feed_audio_frame(audio_frame)
+
+    # Feed audio for standalone VAD
+    if keyword_model.is_listening_vad_stand_alone:
+        speech_probability = keyword_model.feed_audio_frame_vad(audio_frame)
+
+    # Noise level detection
+    dbfs, actual_sound = keyword_model.feed_audio_frame_noise_detection(
+        audio_frame, low_noise_margin_db=20, high_noise_margin_db=40
+    )
+```
+
+#### External Audio API Methods
+
+| Method | Description |
+|--------|-------------|
+| `start_keyword_detection_external_audio(enable_vad, buffer_ms)` | Initialize wake word detection for external audio |
+| `start_vad_external_audio()` | Initialize standalone Voice Activity Detection |
+| `feed_audio_frame(audio_frame)` | Feed a `numpy.int16` audio frame for wake word detection |
+| `feed_audio_frame_vad(audio_frame)` | Feed audio for VAD; returns `float` speech probability (0.0 - 1.0) |
+| `feed_audio_frame_noise_detection(audio_frame, low_noise_margin_db, high_noise_margin_db)` | Returns `(dbfs, sound_type)` where `sound_type` is e.g. `'silence'`, or an indication of detected sound |
+
+#### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `is_listening` | `bool` | `True` when wake word detection is active and ready for audio |
+| `is_listening_vad_stand_alone` | `bool` | `True` when standalone VAD is active and ready for audio |
+| `keyword_models_names` | `list[str]` | List of loaded model names |
+
+### File-Based Detection
+
+#### `start_keyword_detection_from_file(file_path)`
+
+Run wake word detection on a `.wav` file. Returns a dictionary with detection results per model:
+
+```python
+output = keyword_model.start_keyword_detection_from_file("path/to/audio.wav")
+# output: { model_name: { "detections": <int>, ... }, ... }
+```
+
 ## Documentation
 - ["Python Wake Word" API Reference](docs/python_wake_word.md)
 - frymanofer.github.io
