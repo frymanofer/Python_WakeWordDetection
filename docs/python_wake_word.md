@@ -77,7 +77,7 @@ Creates a keyword detection instance.
 | `model_path` | `str` | Yes | Path to the `.onnx` model file |
 | `callback_function` | `callable` | Yes | Function invoked when the wake word is detected |
 | `threshold` | `float` | Yes | Detection sensitivity (`0.0` – `1.0`). Higher = fewer false positives |
-| `buffer_cnt` | `int` | Yes | Number of consecutive inference frames to buffer before triggering |
+| `buffer_cnt` | `int` | Yes | Number of sub models to predict on the buffer -> more equals less false positives |
 | `wait_time` | `int` | No | Wait time in milliseconds between inferences (default varies) |
 
 You can supply multiple model dictionaries to detect several wake words simultaneously.

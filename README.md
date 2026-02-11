@@ -175,7 +175,8 @@ keyword_detection_models = [
         "model_path": "models/your_wake_word.onnx",  # Path to the ONNX model file
         "callback_function": detection_callback,       # Function called on detection
         "threshold": 0.9,                              # Detection sensitivity (0.0 - 1.0)
-        "buffer_cnt": 4,                               # Number of buffered inferences
+        "buffer_cnt": 4,                               # | `buffer_cnt` | `int` Number of sub models to predict on the buffer -> more equals less false positives |
+
         "wait_time": 50                                # Wait time in ms between inferences
     }
 ]
