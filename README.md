@@ -29,6 +29,8 @@ Speech to Intent is often triggered after a wake word activates the app, making 
 component of more advanced voice-controlled applications. This layered approach allows for
 seamless and intuitive voice-driven user experiences.
 
+To be up-to-date We are now updating integration instructions to our website - [https://davoice.io/integration-guides-wake-word/python](https://davoice.io/integration-guides-wake-word/python)
+
 # Features
 
 - **Easy to use and deploy with Python:** Check out our example code and install scripts.
