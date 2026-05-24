@@ -37,7 +37,59 @@ To be up-to-date We are now updating integration instructions to our website - [
 - **Cross-Platform Support:** Integrate Davoice "Python wake word" into most known HW architectures and OS.
 - **Low Latency:** Experience near-instantaneous keyword detection.
 - **High Accuracy:** We have successfully reached over 99% accuracy for all our models.
+- **Speaker verification onboarding:** Create a reusable speaker enrollment JSON from microphone samples and verify the same speaker later.
+- **Wake word with speaker verification:** Run wake word detection together with speaker identification so the wake word only triggers for the enrolled user.
+- **Speaker verification gateway before STT:** Gate audio before speech-to-text so downstream ASR / STT receives audio primarily from the target speaker.
 - **Real-World Benchmarks:** At DaVoice, we believe in real benchmarks done by customers on actual use cases rather than static tests. We actively encourage our customers to share their real-world experiences and results.
+
+## Wake Word Speaker Verification and Speaker ID
+
+This repository now includes examples for **wake word with speaker verification**, **speaker identification onboarding**, and a **speaker verification gateway** that can be placed in front of **speech-to-text (STT)** or **voice assistant** pipelines.
+
+These flows are useful when you need more than basic wake word detection:
+
+- A **custom wake word** should trigger only for a known user.
+- A shared device should ignore other speakers after the wake word.
+- A **speaker verification gateway before STT** should isolate the target user voice and reduce downstream audio from nearby speakers.
+- A voice interface should support **speaker onboarding**, **speaker enrollment**, and later **speaker verification from microphone audio**.
+
+### Why use speaker verification before STT?
+
+Putting a **speaker verification gateway** before **speech-to-text** is useful when you want to isolate a target user voice before running a more expensive or privacy-sensitive pipeline.
+
+Benefits include:
+
+- Fewer unwanted STT transcriptions from background speakers.
+- Better voice isolation for personal assistants, healthcare workflows, kiosks, cars, cabins, smart home devices, and shared embedded systems.
+- Lower downstream compute and fewer false activations in multi-user environments.
+- A cleaner handoff from **wake word detection** to **speech to intent** or a full conversational assistant.
+
+### Example speaker-aware wake word use cases
+
+- **Wake word with speaker verification:** "Hey LookDeep" should wake the app only when spoken by the enrolled clinician, driver, operator, or device owner.
+- **Wake word with speaker isolation:** "Hey Assistant" can be detected first, and only then the enrolled speaker's post-wake audio is forwarded into STT.
+- **Speaker gateway before STT:** audio is blocked by default; once the enrolled user is identified, the gateway opens and flushes a short pre-buffer so the beginning of the utterance is not lost.
+- **Speaker onboarding flow:** collect several short microphone samples, save a speaker enrollment profile, and reuse it for verification or wake word gating later.
+
+### Speaker verification examples in this repo
+
+- Linux/macOS examples:
+  [example/speaker_id_onboarding.py](example/speaker_id_onboarding.py),
+  [example/speaker_id_verification.py](example/speaker_id_verification.py),
+  [example/speaker_id_gateway.py](example/speaker_id_gateway.py),
+  [example/wakeword_with_speaker_id.py](example/wakeword_with_speaker_id.py)
+- Windows examples:
+  [example_windows/speaker_id_onboarding.py](example_windows/speaker_id_onboarding.py),
+  [example_windows/speaker_id_verification.py](example_windows/speaker_id_verification.py),
+  [example_windows/speaker_id_gateway.py](example_windows/speaker_id_gateway.py),
+  [example_windows/wakeword_with_speaker_id.py](example_windows/wakeword_with_speaker_id.py)
+
+### Recommended flow
+
+1. Run **speaker onboarding** to create `sv_enrollment.json`.
+2. Use **speaker verification** to validate the enrolled speaker from live microphone audio.
+3. Use **wake word with speaker verification** when the wake phrase should only trigger for the enrolled user.
+4. Use the **speaker verification gateway** before **STT / ASR / speech to intent** when you want to forward only target-speaker audio downstream.
 
 # <u> 🟢🟢 Customer Benchmarks 🟢🟢 </u>
 
@@ -336,6 +388,7 @@ output = keyword_model.start_keyword_detection_from_file("path/to/audio.wav")
 
 ## Documentation
 - ["Python Wake Word" API Reference](docs/python_wake_word.md)
+- ["Wake Word Speaker Verification and STT Gateway Guide"](docs/speaker-verification-wake-word.md)
 - frymanofer.github.io
 
 ## Benchmark.
@@ -366,6 +419,17 @@ DaVoice.io Voice commands / Wake words / Voice to Intent / keyword detection npm
 "wake words",
 "keyword detection",
 "keyword spotting",
+"speaker verification",
+"speaker identification",
+"speaker onboarding",
+"speaker enrollment",
+"wake word with speaker verification",
+"wake word speaker verification",
+"wake word speaker id",
+"speaker verification gateway",
+"speaker verification before STT",
+"speaker isolation before speech to text",
+"voice isolation for STT",
 "speech to intent",
 "voice to intent",
 "phrase spotting",

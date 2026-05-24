@@ -17,6 +17,14 @@ Follow installation on in the main folder and run the below command:
 $ python example.py
 change example.py accordingly.
 
+For the new speaker-aware flows, see:
+
+- [../docs/speaker-verification-wake-word.md](../docs/speaker-verification-wake-word.md)
+- [wakeword_with_speaker_id.py](wakeword_with_speaker_id.py)
+- [speaker_id_onboarding.py](speaker_id_onboarding.py)
+- [speaker_id_verification.py](speaker_id_verification.py)
+- [speaker_id_gateway.py](speaker_id_gateway.py)
+
 ## Features
 
 - **High Accuracy:** Our advanced machine learning models deliver top-notch accuracy.
