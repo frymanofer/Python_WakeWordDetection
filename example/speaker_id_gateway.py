@@ -59,6 +59,26 @@ def fake_stt_sink(audio_frame: np.ndarray) -> None:
     print(f"downstream got frame: samples={audio_frame.size}")
 
 
+def format_gateway_status(last_result: dict | None, gate_open: bool, flushed_frames: int = 0) -> str:
+    if last_result is None:
+        return "gate=CLOSED awaiting-decision"
+
+    ui_score = float(last_result.get("uiScore", last_result.get("score", 0.0)))
+    ui_is_match = bool(last_result.get("uiIsMatch", False))
+
+    if gate_open:
+        return (
+            f"gate=OPEN uiScore={ui_score:.3f} "
+            f"match={'YES' if ui_is_match else 'NO'} "
+            f"flushing={flushed_frames} frame(s)"
+        )
+
+    if ui_is_match:
+        return f"gate=CLOSED uiScore={ui_score:.3f} match=YES pending-open"
+
+    return "gate=CLOSED match=NO"
+
+
 def main() -> None:
     args = build_parser().parse_args()
     script_dir = Path(__file__).resolve().parent
@@ -91,20 +111,12 @@ def main() -> None:
             data = stream.read(args.frame_size, exception_on_overflow=False)
             frame = np.frombuffer(data, dtype=np.int16)
             gated_frames = gateway.feed_audio_frame(frame)
+            last_result = gateway.get_last_result()
             if gated_frames is None:
-                last_result = gateway.get_last_result()
-                if last_result is not None:
-                    print(
-                        f"gate=CLOSED score={float(last_result['score']):.3f}"
-                    )
+                print(format_gateway_status(last_result, gate_open=False))
                 continue
 
-            last_result = gateway.get_last_result()
-            if last_result is not None:
-                print(
-                    f"gate=OPEN score={float(last_result['score']):.3f} "
-                    f"flushing={len(gated_frames)} frame(s)"
-                )
+            print(format_gateway_status(last_result, gate_open=True, flushed_frames=len(gated_frames)))
             for gated_frame in gated_frames:
                 fake_stt_sink(np.asarray(gated_frame, dtype=np.int16))
     except KeyboardInterrupt:

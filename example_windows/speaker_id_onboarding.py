@@ -11,6 +11,8 @@ This mirrors the React Native onboarding flow at a high level:
 from __future__ import annotations
 
 import argparse
+import keyword_detection
+import os
 from pathlib import Path
 
 from keyword_detection import SpeakerVerification
@@ -33,7 +35,8 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 def main() -> None:
-    args = build_parser().parse_args()
+    parser = build_parser()
+    args = parser.parse_args()
     script_dir = Path(__file__).resolve().parent
     license_path = script_dir / "licensekey.txt"
     license_key = license_path.read_text(encoding="utf-8").strip()
@@ -53,6 +56,8 @@ def main() -> None:
     print(f"Sample rate      : {args.sample_rate}")
     print(f"Frame size       : {args.frame_size}")
     print(f"Output JSON      : {args.output}")
+    print(f"keyword_detection package path: {keyword_detection.__file__}")
+    print(f"DAVOICE_SV_DEBUG={os.environ.get('DAVOICE_SV_DEBUG', '')}")
     print("")
     print("Press Enter before each enrollment sample and speak clearly.")
     embeddings = []

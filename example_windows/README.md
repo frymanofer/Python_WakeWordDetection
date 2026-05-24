@@ -11,7 +11,7 @@ By [DaVoice.io](https://davoice.io)
 
 Welcome to **Davoice WakeWord / Keywords Detection** – Wake words and keyword detection solution designed by **DaVoice.io**.
 
-## This Windows example folder!
+## This example folder!
 
 Follow installation on in the main folder and run the below command:
 $ python example.py
@@ -34,7 +34,17 @@ For the new speaker-aware flows, see:
 
 ## Platforms and Supported Languages
 
+- **linux.x86_64**
+- **linux.aarch64**
+- **linux.armv7**
+- **linux.ppc64**
+- **linux.ppc64le**
+- **linux.s390x**
+- **darwin.x86_64**
+- **darwin.arm64**
+- **win32**
 - **win_amd64**
+- **win.arm64**
 
 ## Contact
 

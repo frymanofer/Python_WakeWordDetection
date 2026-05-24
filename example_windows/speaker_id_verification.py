@@ -20,7 +20,7 @@ from keyword_detection import SpeakerVerification
 DEFAULT_SAMPLE_RATE = 16000
 DEFAULT_FRAME_SIZE = 1280
 DEFAULT_HOP_SECONDS = 0.25
-DEFAULT_MATCH_HOLD_MS = 750
+DEFAULT_MATCH_HOLD_MS = 1000
 
 def build_parser() -> argparse.ArgumentParser:
     script_dir = Path(__file__).resolve().parent
