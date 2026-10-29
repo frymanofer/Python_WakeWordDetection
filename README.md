@@ -1,4 +1,5 @@
 # Python_WakeWordDetection
+[License](LICENSE) · [Model and Voice Asset Notice](MODEL_NOTICES.md)
 # Python Wake Words Detection / Keywords Detection by Davoice
 
 [![GitHub release](https://img.shields.io/github/release/frymanofer/KeyWordDetectionIOSFramework.svg)](https://github.com/frymanofer/KeyWordDetectionIOSFramework/releases)
