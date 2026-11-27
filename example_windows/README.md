@@ -25,6 +25,21 @@ For the new speaker-aware flows, see:
 - [speaker_id_verification.py](speaker_id_verification.py)
 - [speaker_id_gateway.py](speaker_id_gateway.py)
 
+### Commands under a wake word
+
+[example_wakeword_commands_hierarchy.py](example_wakeword_commands_hierarchy.py): each command
+listens only for a few seconds after its own wake word; said on its own, it is ignored.
+
+```
+pip install pyaudio
+python example_wakeword_commands_hierarchy.py                      # microphone
+python example_wakeword_commands_hierarchy.py --files a.wav b.wav  # WAV files: 16 kHz, mono, 16-bit
+```
+
+Say "Engine", then "Dead slow ahead" or "Stand by the engine". In Russian, say "Mashina", then
+"Prigotovit mashinu" or "Samyj malyj vpered". The configuration options are explained in
+[../example/README.md](../example/README.md#commands-under-a-wake-word).
+
 ## Features
 
 - **High Accuracy:** Our advanced machine learning models deliver top-notch accuracy.
