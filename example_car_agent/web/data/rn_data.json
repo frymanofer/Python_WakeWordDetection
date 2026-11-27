@@ -1,0 +1,512 @@
+{
+ "styleExamples": {
+  "whisper": {
+   "en": {
+    "label": "Whisper",
+    "text": "[whispering confidentially] Quiet, this is a secret! Do not tell anyone!"
+   },
+   "pt-BR": {
+    "label": "Sussurro",
+    "text": "[sussurrando em segredo] Silêncio, isso é um segredo! Não conte para ninguém!"
+   },
+   "pt-PT": {
+    "label": "Sussurro",
+    "text": "[a sussurrar em segredo] Silêncio, isto é um segredo! Não contes a ninguém!"
+   },
+   "de": {
+    "label": "Flüstern",
+    "text": "[vertraulich flüsternd] Leise, das ist ein Geheimnis! Sag es niemandem!"
+   },
+   "es": {
+    "label": "Susurro",
+    "text": "[susurrando confidencialmente] Silencio, ¡esto es un secreto! ¡No se lo digas a nadie!"
+   },
+   "fr": {
+    "label": "Murmure",
+    "text": "[murmurant confidentiellement] Chut, c’est un secret ! Ne le dis à personne !"
+   },
+   "it": {
+    "label": "Sussurro",
+    "text": "[sussurrando in confidenza] Piano, è un segreto! Non dirlo a nessuno!"
+   },
+   "nl": {
+    "label": "Fluisteren",
+    "text": "[vertrouwelijk fluisterend] Stil, dit is een geheim! Vertel het aan niemand!"
+   }
+  },
+  "soft_whisper": {
+   "en": {
+    "label": "Soft whisper",
+    "text": "[soft gentle whisper] Close your eyes and rest. Everything is going to be fine."
+   },
+   "pt-BR": {
+    "label": "Sussurro suave",
+    "text": "[sussurro suave e terno] Feche os olhos e descanse. Vai ficar tudo bem."
+   },
+   "pt-PT": {
+    "label": "Sussurro suave",
+    "text": "[sussurro suave e terno] Fecha os olhos e descansa. Vai correr tudo bem."
+   },
+   "de": {
+    "label": "Sanftes Flüstern",
+    "text": "[sanft und beruhigend flüsternd] Schließe die Augen und ruhe dich aus. Alles wird gut."
+   },
+   "es": {
+    "label": "Susurro suave",
+    "text": "[susurro suave y tierno] Cierra los ojos y descansa. Todo va a estar bien."
+   },
+   "fr": {
+    "label": "Murmure doux",
+    "text": "[murmure doux et tendre] Ferme les yeux et repose-toi. Tout va bien se passer."
+   },
+   "it": {
+    "label": "Sussurro dolce",
+    "text": "[sussurro dolce e tenero] Chiudi gli occhi e riposati. Andrà tutto bene."
+   },
+   "nl": {
+    "label": "Zacht gefluister",
+    "text": "[zacht en teder gefluister] Sluit je ogen en rust uit. Alles komt goed."
+   }
+  },
+  "strong_whisper": {
+   "en": {
+    "label": "Strong whisper",
+    "text": "[strong urgent whisper] Get down, now! They are right behind the door!"
+   },
+   "pt-BR": {
+    "label": "Sussurro forte",
+    "text": "[sussurro forte e urgente] Abaixe agora! Eles estão atrás da porta!"
+   },
+   "pt-PT": {
+    "label": "Sussurro forte",
+    "text": "[sussurro forte e urgente] Baixa-te já! Eles estão atrás da porta!"
+   },
+   "de": {
+    "label": "Kräftiges Flüstern",
+    "text": "[dringend und kräftig flüsternd] Runter, sofort! Sie sind direkt hinter der Tür!"
+   },
+   "es": {
+    "label": "Susurro intenso",
+    "text": "[susurro fuerte y urgente] ¡Agáchate, ahora! ¡Están justo detrás de la puerta!"
+   },
+   "fr": {
+    "label": "Murmure intense",
+    "text": "[murmure fort et urgent] Baisse-toi, tout de suite ! Ils sont juste derrière la porte !"
+   },
+   "it": {
+    "label": "Sussurro intenso",
+    "text": "[sussurro forte e urgente] Abbassati, subito! Sono proprio dietro la porta!"
+   },
+   "nl": {
+    "label": "Krachtig gefluister",
+    "text": "[krachtig en dringend gefluister] Duik weg, nu! Ze staan vlak achter de deur!"
+   }
+  },
+  "extremly_quiet_whisper": {
+   "en": {
+    "label": "Very quiet whisper",
+    "text": "[barely audible whisper] Shh... the baby is finally asleep."
+   },
+   "pt-BR": {
+    "label": "Sussurro bem baixo",
+    "text": "[sussurro quase inaudível] Psiu... o bebê finalmente dormiu."
+   },
+   "pt-PT": {
+    "label": "Sussurro muito baixo",
+    "text": "[sussurro quase inaudível] Chiu... o bebé finalmente adormeceu."
+   },
+   "de": {
+    "label": "Sehr leises Flüstern",
+    "text": "[kaum hörbares Flüstern] Psst ... das Baby schläft endlich."
+   },
+   "es": {
+    "label": "Susurro muy bajo",
+    "text": "[susurro casi inaudible] Shh... el bebé por fin se ha dormido."
+   },
+   "fr": {
+    "label": "Murmure très discret",
+    "text": "[murmure à peine audible] Chut... le bébé dort enfin."
+   },
+   "it": {
+    "label": "Sussurro molto piano",
+    "text": "[sussurro appena udibile] Shh... il bambino finalmente dorme."
+   },
+   "nl": {
+    "label": "Heel zacht gefluister",
+    "text": "[bijna onhoorbaar gefluister] Ssst... de baby slaapt eindelijk."
+   }
+  },
+  "angry_whisper": {
+   "en": {
+    "label": "Angry whisper",
+    "text": "[angry whisper] I told you not to touch that. Put it back right now."
+   },
+   "pt-BR": {
+    "label": "Sussurro bravo",
+    "text": "[sussurrando com raiva] Eu falei para não mexer nisso. Coloque de volta agora."
+   },
+   "pt-PT": {
+    "label": "Sussurro zangado",
+    "text": "[a sussurrar com raiva] Eu disse-te para não mexeres nisso. Põe isso no sítio já."
+   },
+   "de": {
+    "label": "Wütendes Flüstern",
+    "text": "[wütend flüsternd] Ich habe dir gesagt, dass du das nicht anfassen sollst. Leg es sofort zurück."
+   },
+   "es": {
+    "label": "Susurro enfadado",
+    "text": "[susurrando con enfado] Te dije que no tocaras eso. Vuélvelo a poner ahora mismo."
+   },
+   "fr": {
+    "label": "Murmure furieux",
+    "text": "[murmurant avec colère] Je t’ai dit de ne pas toucher à ça. Remets-le tout de suite."
+   },
+   "it": {
+    "label": "Sussurro arrabbiato",
+    "text": "[sussurrando con rabbia] Ti ho detto di non toccarlo. Rimettilo subito a posto."
+   },
+   "nl": {
+    "label": "Boos gefluister",
+    "text": "[boos fluisterend] Ik zei dat je dat niet mocht aanraken. Leg het onmiddellijk terug."
+   }
+  },
+  "happy_laughing": {
+   "en": {
+    "label": "Happy",
+    "text": "[happy and enjoying life] What a funny joke! I could not stop laughing."
+   },
+   "pt-BR": {
+    "label": "Feliz",
+    "text": "[feliz e sorrindo] Que piada engraçada! Eu não consegui parar de rir."
+   },
+   "pt-PT": {
+    "label": "Feliz",
+    "text": "[feliz e a sorrir] Que piada tão engraçada! Não consegui parar de rir."
+   },
+   "de": {
+    "label": "Fröhlich",
+    "text": "[fröhlich und lebensfroh] Was für ein lustiger Witz! Ich musste einfach lachen."
+   },
+   "es": {
+    "label": "Feliz",
+    "text": "[alegre y disfrutando de la vida] ¡Qué chiste tan gracioso! No podía parar de reírme."
+   },
+   "fr": {
+    "label": "Joyeux",
+    "text": "[joyeux et plein de vie] Quelle blague amusante ! Je n’arrivais plus à m’arrêter de rire."
+   },
+   "it": {
+    "label": "Felice",
+    "text": "[felice e pieno di gioia] Che battuta divertente! Non riuscivo a smettere di ridere."
+   },
+   "nl": {
+    "label": "Vrolijk",
+    "text": "[vrolijk en levenslustig] Wat een grappige grap! Ik kon niet ophouden met lachen."
+   }
+  },
+  "strong_happy_laughing": {
+   "en": {
+    "label": "Laughing hard",
+    "text": "[laughing hysterically] Oh no, you did not just say that! That is hilarious!"
+   },
+   "pt-BR": {
+    "label": "Gargalhada",
+    "text": "[gargalhando histericamente] Não acredito que você disse isso! Que hilário!"
+   },
+   "pt-PT": {
+    "label": "Gargalhada",
+    "text": "[às gargalhadas histéricas] Não acredito que disseste isso! Que hilariante!"
+   },
+   "de": {
+    "label": "Hysterisches Lachen",
+    "text": "[hysterisch lachend] Oh nein, das hast du jetzt nicht wirklich gesagt! Das ist ja unglaublich lustig!"
+   },
+   "es": {
+    "label": "Risa descontrolada",
+    "text": "[riendo histéricamente] ¡No puede ser, no acabas de decir eso! ¡Es divertidísimo!"
+   },
+   "fr": {
+    "label": "Rire aux éclats",
+    "text": "[riant aux éclats] Oh non, tu n’as pas vraiment dit ça ! C’est hilarant !"
+   },
+   "it": {
+    "label": "Risata sfrenata",
+    "text": "[ridendo istericamente] Oh no, non puoi averlo detto davvero! È esilarante!"
+   },
+   "nl": {
+    "label": "Hysterisch lachen",
+    "text": "[hysterisch lachend] O nee, dat heb je toch niet echt gezegd! Dat is hilarisch!"
+   }
+  },
+  "motivating": {
+   "en": {
+    "label": "Motivating",
+    "text": "[motivating coach] You are stronger than you think. One more step, you can do it!"
+   },
+   "pt-BR": {
+    "label": "Motivador",
+    "text": "[treinador motivador] Você é mais forte do que imagina. Só mais um passo, você consegue!"
+   },
+   "pt-PT": {
+    "label": "Motivador",
+    "text": "[treinador motivador] És mais forte do que imaginas. Só mais um passo, tu consegues!"
+   },
+   "de": {
+    "label": "Motivierend",
+    "text": "[motivierender Coach] Du bist stärker, als du denkst. Noch ein Schritt, du schaffst das!"
+   },
+   "es": {
+    "label": "Motivador",
+    "text": "[entrenador motivador] Eres más fuerte de lo que crees. ¡Un paso más, tú puedes!"
+   },
+   "fr": {
+    "label": "Motivant",
+    "text": "[coach motivant] Tu es plus fort que tu ne le penses. Encore un pas, tu peux y arriver !"
+   },
+   "it": {
+    "label": "Motivante",
+    "text": "[allenatore motivante] Sei più forte di quanto pensi. Ancora un passo, ce la puoi fare!"
+   },
+   "nl": {
+    "label": "Motiverend",
+    "text": "[motiverende coach] Je bent sterker dan je denkt. Nog één stap, je kunt het!"
+   }
+  },
+  "shouting_encouraging": {
+   "en": {
+    "label": "Shouting encouragement",
+    "text": "[shouting encouragement] Come on! Faster! You are almost there!"
+   },
+   "pt-BR": {
+    "label": "Gritando incentivo",
+    "text": "[gritando e encorajando] Vamos lá! Mais rápido! Você está quase lá!"
+   },
+   "pt-PT": {
+    "label": "Grito de incentivo",
+    "text": "[a gritar e a encorajar] Vamos lá! Mais depressa! Estás quase lá!"
+   },
+   "de": {
+    "label": "Lauter Ansporn",
+    "text": "[laut anfeuernd] Los! Schneller! Du bist fast da!"
+   },
+   "es": {
+    "label": "Grito de ánimo",
+    "text": "[gritando para animar] ¡Vamos! ¡Más rápido! ¡Ya casi llegas!"
+   },
+   "fr": {
+    "label": "Encouragement crié",
+    "text": "[criant des encouragements] Allez ! Plus vite ! Tu y es presque !"
+   },
+   "it": {
+    "label": "Incoraggiamento urlato",
+    "text": "[incoraggiando a gran voce] Forza! Più veloce! Ci sei quasi!"
+   },
+   "nl": {
+    "label": "Luid aanmoedigen",
+    "text": "[luid aanmoedigend] Kom op! Sneller! Je bent er bijna!"
+   }
+  },
+  "disappointed": {
+   "en": {
+    "label": "Disappointed",
+    "text": "[disappointed and sad] I really thought you would come today. Oh well."
+   },
+   "pt-BR": {
+    "label": "Decepcionado",
+    "text": "[decepcionado e triste] Eu realmente achei que você viria hoje. Que pena."
+   },
+   "pt-PT": {
+    "label": "Desiludido",
+    "text": "[desiludido e triste] Pensei mesmo que vinhas hoje. Que pena."
+   },
+   "de": {
+    "label": "Enttäuscht",
+    "text": "[enttäuscht und traurig] Ich dachte wirklich, dass du heute kommst. Na ja."
+   },
+   "es": {
+    "label": "Decepcionado",
+    "text": "[decepcionado y triste] De verdad pensé que vendrías hoy. En fin."
+   },
+   "fr": {
+    "label": "Déçu",
+    "text": "[déçu et triste] Je pensais vraiment que tu viendrais aujourd’hui. Tant pis."
+   },
+   "it": {
+    "label": "Deluso",
+    "text": "[deluso e triste] Pensavo davvero che saresti venuto oggi. Pazienza."
+   },
+   "nl": {
+    "label": "Teleurgesteld",
+    "text": "[teleurgesteld en verdrietig] Ik dacht echt dat je vandaag zou komen. Jammer dan."
+   }
+  },
+  "military_sergeant_hard": {
+   "en": {
+    "label": "Drill sergeant",
+    "text": "[drill sergeant] Get down and give me 50 push-ups!"
+   },
+   "pt-BR": {
+    "label": "Sargento",
+    "text": "[sargento militar durão] Ao chão e faça cinquenta flexões!"
+   },
+   "pt-PT": {
+    "label": "Sargento",
+    "text": "[sargento militar duro] Para o chão e faz cinquenta flexões!"
+   },
+   "de": {
+    "label": "Drill-Sergeant",
+    "text": "[harter Drill-Sergeant] Auf den Boden und 50 Liegestütze, sofort!"
+   },
+   "es": {
+    "label": "Sargento instructor",
+    "text": "[sargento instructor] ¡Al suelo y haz 50 flexiones!"
+   },
+   "fr": {
+    "label": "Sergent instructeur",
+    "text": "[sergent instructeur] À terre, et fais 50 pompes !"
+   },
+   "it": {
+    "label": "Sergente istruttore",
+    "text": "[sergente istruttore] A terra, e fai 50 flessioni!"
+   },
+   "nl": {
+    "label": "Drillinstructeur",
+    "text": "[drillinstructeur] Naar de grond en doe vijftig keer opdrukken!"
+   }
+  },
+  "military_sergeant_soft": {
+   "en": {
+    "label": "Friendly sergeant",
+    "text": "[friendly army sergeant] Good work, soldier. Take five and drink some water."
+   },
+   "pt-BR": {
+    "label": "Sargento gentil",
+    "text": "[sargento do exército gentil] Bom trabalho, soldado. Descanse um pouco e beba água."
+   },
+   "pt-PT": {
+    "label": "Sargento gentil",
+    "text": "[sargento do exército gentil] Bom trabalho, soldado. Descansa um pouco e bebe água."
+   },
+   "de": {
+    "label": "Freundlicher Feldwebel",
+    "text": "[freundlicher Feldwebel] Gute Arbeit, Soldat. Ruh dich fünf Minuten aus und trink etwas Wasser."
+   },
+   "es": {
+    "label": "Sargento amable",
+    "text": "[sargento amable] Buen trabajo, soldado. Descansa cinco minutos y bebe agua."
+   },
+   "fr": {
+    "label": "Sergent bienveillant",
+    "text": "[sergent bienveillant] Beau travail, soldat. Repose-toi cinq minutes et bois un peu d’eau."
+   },
+   "it": {
+    "label": "Sergente gentile",
+    "text": "[sergente gentile] Ottimo lavoro, soldato. Riposati cinque minuti e bevi un po’ d’acqua."
+   },
+   "nl": {
+    "label": "Vriendelijke sergeant",
+    "text": "[vriendelijke sergeant] Goed gedaan, soldaat. Neem vijf minuten rust en drink wat water."
+   }
+  }
+ },
+ "enrollmentSentences": {
+  "en": [
+   "{wake}, Please send a message to my friend.",
+   "How's the weather going to be today?",
+   "Please set a timer for three minutes.",
+   "Can you play some music for me?",
+   "Every morning, I enjoy a fresh cup of coffee while watching the beautiful sunrise."
+  ],
+  "pt-BR": [
+   "{wake}, por favor, envie uma mensagem para o meu melhor amigo.",
+   "Como vai estar o tempo hoje, será que vai chover?",
+   "Por favor, programe um alarme para daqui a três minutos.",
+   "Você pode tocar uma música para mim?",
+   "Toda manhã, gosto de tomar um café fresquinho enquanto vejo o lindo nascer do sol."
+  ],
+  "pt-PT": [
+   "{wake}, por favor, envia uma mensagem ao meu melhor amigo.",
+   "Como vai estar o tempo hoje, será que vai chover?",
+   "Por favor, põe um temporizador de três minutos.",
+   "Podes pôr um pouco de música para mim?",
+   "Todas as manhãs, gosto de beber um café acabado de fazer enquanto vejo o lindo nascer do sol."
+  ],
+  "de": [
+   "{wake}, bitte schick meinem Freund eine Nachricht.",
+   "Wie wird das Wetter heute Nachmittag?",
+   "Bitte stell einen Timer auf drei Minuten.",
+   "Kannst du für mich etwas Musik spielen?",
+   "Jeden Morgen genieße ich eine frische Tasse Kaffee und schaue mir den wunderschönen Sonnenaufgang an."
+  ],
+  "es": [
+   "{wake}, por favor, envía un mensaje a mi mejor amigo.",
+   "¿Va a llover hoy o hará buen tiempo?",
+   "Por favor, pon un temporizador de tres minutos.",
+   "¿Puedes poner un poco de música para mí?",
+   "Cada mañana disfruto de una taza de café recién hecho mientras veo el hermoso amanecer."
+  ],
+  "fr": [
+   "{wake}, s'il te plaît, envoie un message à mon ami.",
+   "Quel temps va-t-il faire aujourd'hui ?",
+   "Mets un minuteur de trois minutes, s'il te plaît.",
+   "Peux-tu me jouer un peu de musique ?",
+   "Chaque matin, je savoure une bonne tasse de café en regardant le magnifique lever du soleil."
+  ],
+  "it": [
+   "{wake}, per favore, manda un messaggio al mio migliore amico.",
+   "Che tempo farà oggi pomeriggio?",
+   "Per favore, imposta un timer di tre minuti.",
+   "Puoi mettere un po' di musica per me?",
+   "Ogni mattina mi piace bere una tazza di caffè appena fatto mentre guardo la bellissima alba."
+  ],
+  "nl": [
+   "{wake}, stuur alsjeblieft een bericht naar mijn vriend.",
+   "Wat voor weer wordt het vandaag?",
+   "Zet alsjeblieft een timer op drie minuten.",
+   "Kun je wat muziek voor me afspelen?",
+   "Elke ochtend geniet ik van een vers kopje koffie terwijl ik buiten naar de prachtige zonsopgang kijk."
+  ],
+  "da": [
+   "{wake}, send venligst en besked til min ven.",
+   "Hvordan bliver vejret i dag?",
+   "Sæt venligst en timer på tre minutter.",
+   "Kan du spille noget musik for mig?",
+   "Hver morgen nyder jeg en frisk kop kaffe og ser den smukke solopgang over søen."
+  ],
+  "sv": [
+   "{wake}, skicka ett meddelande till min vän, tack.",
+   "Hur blir vädret i dag?",
+   "Ställ en timer på tre minuter, tack.",
+   "Kan du spela lite musik åt mig?",
+   "Varje morgon njuter jag av en nybryggd kopp kaffe medan jag ser den vackra soluppgången över sjön."
+  ],
+  "el": [
+   "{wake}, στείλε σε παρακαλώ ένα μήνυμα στον φίλο μου.",
+   "Τι καιρό θα κάνει σήμερα;",
+   "Βάλε σε παρακαλώ ένα χρονόμετρο για τρία λεπτά.",
+   "Μπορείς να μου παίξεις λίγη μουσική;",
+   "Κάθε πρωί απολαμβάνω ένα φλιτζάνι φρέσκο καφέ, βλέποντας την όμορφη ανατολή του ήλιου δίπλα στη θάλασσα."
+  ],
+  "he": [
+   "{wake}, בבקשה שלח הודעה לחבר שלי.",
+   "מה יהיה מזג האוויר היום?",
+   "בבקשה כוון טיימר לשלוש דקות.",
+   "אתה יכול לנגן לי קצת מוזיקה?",
+   "כל בוקר אני נהנה מכוס קפה טרי בזמן שאני צופה בזריחה היפה."
+  ]
+ },
+ "cloneReadingTexts": {
+  "en": "Hello! This is my voice. I am recording a short sample so that my assistant can speak just like me. Today is a good day to try something new.",
+  "pt-BR": "Olá! Esta é a minha voz. Estou gravando uma amostra curta para que meu assistente possa falar como eu. Hoje é um bom dia para experimentar algo novo.",
+  "pt-PT": "Olá! Esta é a minha voz. Estou a gravar uma pequena amostra para que o meu assistente possa falar como eu. Hoje é um bom dia para experimentar algo novo.",
+  "de": "Hallo! Das ist meine Stimme. Ich nehme eine kurze Probe auf, damit mein Assistent wie ich sprechen kann. Heute ist ein guter Tag, um etwas Neues auszuprobieren.",
+  "es": "¡Hola! Esta es mi voz. Estoy grabando una muestra breve para que mi asistente pueda hablar como yo. Hoy es un buen día para probar algo nuevo.",
+  "fr": "Bonjour ! Voici ma voix. J’enregistre un court échantillon pour que mon assistant puisse parler comme moi. C’est une bonne journée pour essayer quelque chose de nouveau.",
+  "it": "Ciao! Questa è la mia voce. Sto registrando un breve campione affinché il mio assistente possa parlare come me. Oggi è un buon giorno per provare qualcosa di nuovo.",
+  "he": "שלום! זה הקול שלי. אני מקליט דוגמה קצרה כדי שהעוזר שלי יוכל לדבר בדיוק כמוני. היום הוא יום טוב לנסות משהו חדש.",
+  "da": "Hej! Det her er min stemme. Jeg optager en kort prøve, så min assistent kan tale ligesom mig. I dag er en god dag til at prøve noget nyt.",
+  "sv": "Hej! Det här är min röst. Jag spelar in ett kort prov så att min assistent kan prata precis som jag. I dag är en bra dag att prova något nytt.",
+  "el": "Γεια σας! Αυτή είναι η φωνή μου. Ηχογραφώ ένα σύντομο δείγμα ώστε ο βοηθός μου να μπορεί να μιλάει όπως εγώ. Σήμερα είναι μια καλή μέρα για να δοκιμάσω κάτι καινούργιο.",
+  "nl": "Hallo! Dit is mijn stem. Ik neem een kort fragment op zodat mijn assistent net als ik kan spreken. Vandaag is een goede dag om iets nieuws te proberen."
+ }
+}

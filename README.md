@@ -92,7 +92,16 @@ Benefits include:
 3. Use **wake word with speaker verification** when the wake phrase should only trigger for the enrolled user.
 4. Use the **speaker verification gateway** before **STT / ASR / speech to intent** when you want to forward only target-speaker audio downstream.
 
+# 🆕 Speech to text, text to speech and an on-device AI agent
+
+The same library now also includes real-time **speech to text** (25 languages), **text to speech**
+(11 languages, voice cloning) and an **on-device AI agent**, all running on your own computer.
+Step-by-step setup and ready-to-run examples: [example/README.md](example/README.md#voice-ai-examples-wake-word-speech-to-text-text-to-speech-on-device-ai-agent)
+(Apple Silicon Macs and Linux x86_64 / aarch64).
+
 # <u> 🟢🟢 Customer Benchmarks 🟢🟢 </u>
+
+Both studies on one page: [wake word benchmark on davoice.io](https://davoice.io/wake-word-benchmark).
 
 
 
@@ -446,13 +455,24 @@ DaVoice.io Voice commands / Wake words / Voice to Intent / keyword detection npm
 "customized lightweight Voice Commands Recognition",
 "rn wake word"
 
+## Learn more on davoice.io
+
+- [Python wake word detection guide](https://davoice.io/integration-guides-wake-word/python)
+- [What is a wake word? DaVoice on-device wake word detection](https://davoice.io/wake-word)
+- [Wake word benchmark](https://davoice.io/wake-word-benchmark): two independent customer studies, DaVoice vs. commercial engines and openWakeWord
+- [Speaker recognition and speaker verification](https://davoice.io/speaker-recognition)
+- [On-device speech to text SDK](https://davoice.io/speech-to-text): real-time and offline, no per-minute fees
+- [Custom wake words without collecting training data](https://davoice.io/wake-word-training-data)
+- [Free online text to speech](https://davoice.io/free-text-to-speech): free and unlimited, with no sign-up, no login and no subscription. Natural AI voices in 11 languages, voice cloning, MP3 and WAV download, generated in your browser
+- [Pricing](https://davoice.io/pricing): free license for proof-of-concept, academic and non-commercial projects
+
 ## Links
 
 Here are wakeword detection GitHub links per platform:
 
 - **Web / JS / Angular / React:** https://github.com/frymanofer/Web_WakeWordDetection/tree/main
 - **For React Native:** [ReactNative_WakeWordDetection](https://github.com/frymanofer/ReactNative_WakeWordDetection)
-- **For Android:** [KeywordsDetectionAndroidLibrary](https://github.com/frymanofer/KeywordsDetectionAndroidLibrary)
+- **For Android:** [Android_Native_Wake_Word](https://github.com/frymanofer/Android_Native_Wake_Word)
 - **For iOS framework:** 
   - With React Native bridge: [KeyWordDetectionIOSFramework](https://github.com/frymanofer/KeyWordDetectionIOSFramework)
-  - Sole Framework: [KeyWordDetection](https://github.com/frymanofer/KeyWordDetection)
+  - Sole Framework: [KeyWordDetection](https://github.com/frymanofer/IOSNativeSwiftWakeWordDetection)

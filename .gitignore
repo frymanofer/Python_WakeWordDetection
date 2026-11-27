@@ -30,3 +30,9 @@ example/source/index.rst
 clean_example_build_files.sh
 list_get_nurse.txt
 list_hey_look_deep.txt
+
+# Voice AI examples: the speech model (2.5 GB, downloaded by example/download_stt_model.py), its notice, the setup venv.
+**/davoice_stt.dm
+**/davoice_stt.dm.part
+**/davoice_stt_NOTICES.md
+**/venv-voice-ai/
