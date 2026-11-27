@@ -17,6 +17,43 @@ Follow installation on in the main folder and run the below command:
 $ python example.py
 change example.py accordingly.
 
+## Commands under a wake word
+
+A command listens only for a few seconds after **its own** wake word. Said on its own, it is
+ignored, so false detections stay low and every wake word can have its own commands.
+
+```bash
+python example_wakeword_commands_hierarchy.py                    # microphone (needs: pip install pyaudio)
+python example_wakeword_commands_hierarchy.py --files a.wav b.wav    # WAV files: 16 kHz, mono, 16-bit
+```
+
+Say "Engine", then "Dead slow ahead" or "Stand by the engine". In Russian, say "Mashina"
+(Машина), then "Prigotovit mashinu" (Приготовить машину) or "Samyj malyj vpered" (Самый малый вперёд).
+
+Add a `"commands"` list to a wake word:
+
+```python
+keyword_detection_models = [{
+    "model_path": "models/engine_model_28_02042025_pyv2.onnx",   # the wake word
+    "callback_function": on_wake_word,
+    "threshold": 0.99, "buffer_cnt": 5, "wait_time": 2000,
+    "commands": [{
+        "model_path": "models/dead_slow_ahead_model_28_02042025_pyv2.onnx",
+        "callback_function": on_command,   # params: phrase, parent_wakeword, threshold_scores
+        "threshold": 0.99,                 # score needed for a frame to count (0..1)
+        "buffer_cnt": 5,                   # frames above threshold before the callback fires
+        "wait_time": 2000,                 # ms before the same command can fire again
+        "prefetch_ms": 0,                  # also look this many ms before the wake word started
+        "command_timeout_ms": 5000,        # how long the command listens after its wake word
+    }],
+}]
+```
+
+Commands work with every input: the microphone (`start_keyword_detection`), your own audio
+(`start_keyword_detection_external_audio` + `feed_audio_frame`), and files
+(`start_keyword_detection_from_file`, `start_keyword_detection_from_file_list`). In file mode the
+wake word callback is not called; the command callbacks are.
+
 ## Voice AI examples: wake word, speech to text, text to speech, on-device AI agent
 
 Everything below runs on your own computer: no cloud, no per-minute fees. The examples use the
