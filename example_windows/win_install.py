@@ -12,7 +12,7 @@ BASE_URL = "https://github.com/frymanofer/Python_WakeWordDetection/raw/main/dist
 PACKAGE_NAME = "keyword_detection_lib"
 
 # Check for the environment variable or use the default version
-KEYWORD_DETECTION_VERSION = os.getenv("KEYWORD_DETECTION_VERSION", "2.1.0")
+KEYWORD_DETECTION_VERSION = os.getenv("KEYWORD_DETECTION_VERSION", "2.1.3")
 
 # Determine Python version
 python_version = f"cp{sys.version_info.major}{sys.version_info.minor}"
@@ -25,4 +25,5 @@ wheel_name = f"{PACKAGE_NAME}-{KEYWORD_DETECTION_VERSION}-{python_version}-none-
 wheel_url = f"{BASE_URL}/{wheel_name}"
 
 # Install the package using py -m pip
-subprocess.run(["py", "-m", "pip", "install", wheel_url], check=True)
+# sys.executable: the Python running this script (the venv one from win_install.cmd).
+subprocess.run([sys.executable, "-m", "pip", "install", wheel_url], check=True)

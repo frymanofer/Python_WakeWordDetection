@@ -25,13 +25,22 @@ if __name__ == "__main__":
     consecutiveCountThreshold = 5
 
     if len(sys.argv) > 3:
-        predThreshold = sys.argv[3]
+        predThreshold = float(sys.argv[3])
         print(f"Setting prediction threshold to: {predThreshold}")
     if len(sys.argv) > 4:
         consecutiveCountThreshold = int(sys.argv[4])
         print(f"Setting consecutive count threshold to: {consecutiveCountThreshold}")
 
-    keyword_detection_models = [models]
+    # One entry per model (comma-separated on the command line).
+    keyword_detection_models = [
+        {
+            "model_path": model_path.strip(),
+            "callback_function": detection_callback,
+            "threshold": predThreshold,
+            "buffer_cnt": consecutiveCountThreshold,
+        }
+        for model_path in models.split(",") if model_path.strip()
+    ]
 
     keyword_model = KeywordDetection(keyword_models=keyword_detection_models)
     with open("licensekey.txt", "r") as file:
@@ -42,7 +51,7 @@ if __name__ == "__main__":
     for keyword_models_name in keyword_model.keyword_models_names:
         keyword_model.set_callback(keyword_model_name=keyword_models_name, callback=detection_callback)
 
-    keyword_model.set_kd_threshold_gw_cnt_advanced(0.99995,5)
+    keyword_model.set_kd_threshold_gw_cnt_advanced(predThreshold, consecutiveCountThreshold)
 
     print_banner("Starting Keyword Detection from Files")
 
